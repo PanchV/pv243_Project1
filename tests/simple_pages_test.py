@@ -14,13 +14,13 @@ def test_request_index(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Index Page" in response.data
+    assert b"Home" in response.data
 
 def test_request_about(client):
     """This makes the index page"""
     response = client.get("/Git")
     assert response.status_code == 200
-    assert b"Git Page" in response.data
+    assert b"Git" in response.data
 
 def test_request_page1(client):
     """This makes the index page"""
@@ -36,9 +36,9 @@ def test_request_page2(client):
 
 def test_request_page3(client):
     """This makes the index page"""
-    response = client.get("/Contact")
+    response = client.get("/CI-CD")
     assert response.status_code == 200
-    assert b"Contact Page" in response.data
+    assert b"CI-CD Page" in response.data
 
 def test_request_page_not_found(client):
     """This makes the index page"""
