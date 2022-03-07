@@ -101,8 +101,11 @@
                             <li>run: lets you create a container from an image</li>
                             <li>ps: lets you view the currently running containers</li>
                             <li>rm: lets you delete a stopped container</li>
-                            <li>stop: lets you stop a running container(gives container time to shut down gracefully)</li>
-                            <li>kill: lets you stop a container's executions immediately(used when container is taking too long to shut down)</li>
+                            <li>stop: lets you stop a running container(gives container time to shut down gracefully)
+                            </li>
+                            <li>kill: lets you stop a container's executions immediately(used when container is taking
+                                too long to shut down)
+                            </li>
                             <li>commit: lets you make a new image of a changed container locally</li>
                         </ul>
 
@@ -117,7 +120,9 @@
                     <h1>Starting Up The Project</h1>
                 </div>
                 <div class="col">
-                    To start up this web development project, you need to
+                    To start up this web development project, you need to have a docker repository set up, make sure that all changes made on the local
+                    branch have been merged, make sure all the tests pass, and that the application is deployed on the Heroku web server.
+
                 </div>
             </div>
         </div>
@@ -128,7 +133,23 @@
                     <h1>Accessing The Container With Terminal</h1>
                 </div>
                 <div class="col">
-                    A
+
+                    <div class="container my-4">
+
+
+                        <p>To access the container via terminal:</p>
+
+                        <ul>
+                            <li>Use docker ps to see any currently running docker containers</li>
+                            <li>Use docker kill to clear any containers that are irrelevant or might be using the ports you need</li>
+                            <li>Use docker compose up --build to create a new container</li>
+                            <li>Use docker exec -it [container name] /bin/bash to get a bash shell inside the container if necessary</li>
+
+                        </ul>
+
+                    </div>
+
+
                 </div>
             </div>
         </div>

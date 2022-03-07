@@ -27,11 +27,16 @@
                 <div class="col">
                     <p>
                     <h1>What is Git?</h1>
-                    Git is a free and open-source DevOps software originally developed by Linus Torvalds in 2005 for collaboration among Kernel
-                    developers during the creation of the Linux Kernel. It is typically used to manage tracking changes of source code,
-                    which in turn allows multiple software engineers to work together non-linearly. With Git, every member of the development team
-                    has a copy of the entire code base on their local developing environment, any changes they make will be tracked by others,
-                    and there is regular communication within the team about specifically what the changes do. The following are features and
+                    Git is a free and open-source DevOps software originally developed by Linus Torvalds in 2005 for
+                    collaboration among Kernel
+                    developers during the creation of the Linux Kernel. It is typically used to manage tracking changes
+                    of source code,
+                    which in turn allows multiple software engineers to work together non-linearly. With Git, every
+                    member of the development team
+                    has a copy of the entire code base on their local developing environment, any changes they make will
+                    be tracked by others,
+                    and there is regular communication within the team about specifically what the changes do. The
+                    following are features and
                     elements of Git that will help us further understand how it works and how it is useful:
                     </p>
                 </div>
@@ -44,9 +49,12 @@
                     <h1>Branches</h1>
                 </div>
                 <div class="col">
-                    A Git Branch is simply a snapshot or temporary copy of the main version of the source code. When you create a new branch, you
-                    diverge from the main code and are free to make changes without interfering with the source code. When you are finished making
-                    changes, you can rejoin or "Merge" your branch with the main branch which will add all of your changes to the main source code.
+                    A Git Branch is simply a snapshot or temporary copy of the main version of the source code. When you
+                    create a new branch, you
+                    diverge from the main code and are free to make changes without interfering with the source code.
+                    When you are finished making
+                    changes, you can rejoin or "Merge" your branch with the main branch which will add all of your
+                    changes to the main source code.
 
                 </div>
             </div>
@@ -58,9 +66,12 @@
                             <h1>Merge</h1>
                         </div>
                         <div class="col">
-                            A Git Merge is a way for Git to put together all the various versions of code that have been developed independently from
-                            the source code. The merge command essentially takes the ends of the two or more branches, and then tries to find a
-                            common base "Commit" between the two versions. Once it finds the common base commit, it creates a new commit that combines
+                            A Git Merge is a way for Git to put together all the various versions of code that have been
+                            developed independently from
+                            the source code. The merge command essentially takes the ends of the two or more branches,
+                            and then tries to find a
+                            common base "Commit" between the two versions. Once it finds the common base commit, it
+                            creates a new commit that combines
                             the changes of the multiple branches.
                         </div>
                     </div>
@@ -72,8 +83,10 @@
                                     <h1>Commit</h1>
                                 </div>
                                 <div class="col">
-                                    A Git Commit is how you get a snapshot of all the changes made on the current branch at any given point. Git developers
-                                    usually accumulate multiple commits on their own local branch, keep related commits grouped together, and then clean
+                                    A Git Commit is how you get a snapshot of all the changes made on the current branch
+                                    at any given point. Git developers
+                                    usually accumulate multiple commits on their own local branch, keep related commits
+                                    grouped together, and then clean
                                     up their local branch before merging it with the main branch.
                                 </div>
                             </div>
@@ -85,43 +98,51 @@
                                             <h1>Tags</h1>
                                         </div>
                                         <div class="col">
-                                            Git Tags are references that act as pointers to specific parts of the git history. It is considered good practice
-                                            to use the tag feature to keep track of versions of code. Git supports Annotated Tags and Lightweight Tags. Annotated
-                                            tags store metadata such as tagger's email and the date. Lightweight Tags do not store this extra metadata and are very
+                                            Git Tags are references that act as pointers to specific parts of the git
+                                            history. It is considered good practice
+                                            to use the tag feature to keep track of versions of code. Git supports
+                                            Annotated Tags and Lightweight Tags. Annotated
+                                            tags store metadata such as tagger's email and the date. Lightweight Tags do
+                                            not store this extra metadata and are very
                                             much like a branch that doesn't change.
                                         </div>
                                     </div>
                                     <hr/>
-                            <div class="row">
-                                <div class="container">
                                     <div class="row">
-                                        <div class="col col-md-3">
-                                            <h1>Repositories</h1>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col col-md-3">
+                                                    <h1>Repositories</h1>
+                                                </div>
+                                                <div class="col">
+                                                    A Git Repository is the virtual folder that contains all the saved
+                                                    versions of your code as well as any relevant program
+                                                    files. Repositories can be created via the git init command when
+                                                    making a repository from scratch or via the git clone command
+                                                    to create a local copied version of an already set up central
+                                                    repository. Git has two kinds of repositories: Bare Repositories,
+                                                    used to share the edits made by team members and Non-Bare
+                                                    Repositories, used to allow users to make changes to an existing
+                                                    repository
+                                                    and make new versions.
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div class="col">
-                                            A Git Repository is the virtual folder that contains all the saved versions of your code as well as any relevant program
-                                            files. Repositories can be created via the git init command when making a repository from scratch or via the git clone command
-                                            to create a local copied version of an already set up central repository. Git has two kinds of repositories: Bare Repositories,
-                                            used to share the edits made by team members and Non-Bare Repositories, used to allow users to make changes to an existing repository
-                                            and make new versions.
-                                        </div>
-                                    </div>
 
-                                </div>
+                                        <!-- Optional JavaScript; choose one of the two! -->
 
-                                <!-- Optional JavaScript; choose one of the two! -->
+                                        <!-- Option 1: Bootstrap Bundle with Popper -->
+                                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                                                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                                                crossorigin="anonymous"></script>
 
-                                <!-- Option 1: Bootstrap Bundle with Popper -->
-                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                                        crossorigin="anonymous"></script>
-
-                                <!-- Option 2: Separate Popper and Bootstrap JS -->
-                                <!--
-                                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-                                -->
-                                <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+                                        <!-- Option 2: Separate Popper and Bootstrap JS -->
+                                        <!--
+                                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+                                        -->
+                                        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     </body>
     </html>
 {% endblock %}
