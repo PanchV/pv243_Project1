@@ -49,6 +49,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
   deploy:
+    if: github.repository == 'PanchV/pv243_Project1'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
