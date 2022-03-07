@@ -26,19 +26,19 @@ def test_request_page1(client):
     """This makes the index page"""
     response = client.get("/Docker")
     assert response.status_code == 200
-    assert b"Docker Page" in response.data
+    assert b"Docker" in response.data
 
 def test_request_page2(client):
     """This makes the index page"""
     response = client.get("/Python-Flask")
     assert response.status_code == 200
-    assert b"Python Flask Page" in response.data
+    assert b"Python-Flask" in response.data
 
 def test_request_page3(client):
     """This makes the index page"""
     response = client.get("/CI-CD")
     assert response.status_code == 200
-    assert b"CI-CD Page" in response.data
+    assert b"CI-CD" in response.data
 
 def test_request_page_not_found(client):
     """This makes the index page"""
