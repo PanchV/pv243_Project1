@@ -7,7 +7,7 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link" href="/Git">Git</a>' in response.data
     assert b'<a class="nav-link" href="/Docker">Docker</a>' in response.data
     assert b'<a class="nav-link" href="/Python-Flask">Python-Flask</a>' in response.data
-    assert b'<a class="nav-link" href="/CI-CD">CI:CD</a>' in response.data
+    assert b'<a class="nav-link" href="/CI-CD">CI-CD</a>' in response.data
     #assert b'<a class="nav-link" href="/page4">Page 4</a>' in response.data
 
 def test_request_Home(client):
