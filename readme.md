@@ -1,5 +1,3 @@
-#T
-# Project Setup
 
 [![Production Workflow](https://github.com/PanchV/pv243_Project1/actions/workflows/prod.yml/badge.svg)](https://github.com/PanchV/pv243_Project1/actions/workflows/prod.yml)
 
