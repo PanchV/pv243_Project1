@@ -44,7 +44,11 @@
                 <div class="col">
                     Github Actions allow us to implement the process of CI-CD into projects such as this one. They actually go a little bit further than DevOps because they allow
                     certain events such as a pull request to trigger workflows. Github does this via jobs, each of which run inside their own virtual machine/container known
-                    as a runner. Jobs are sets of steps that reside in the yaml file that execute on the same runner. In this project, the Github actions check for
+                    as a runner. Jobs are sets of steps that reside in the yaml file that execute on the same runner. In this project, the Github actions check for the correct
+                    Ubuntu version, Python version, the correct repository, and necessary dependencies:
+                    <a href=https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml>
+                        https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,7 +59,14 @@
                     <h1>Reviewing Code with a Dev Server</h1>
                 </div>
                 <div class="col">
-                    1234
+                    When creating web applications such as this one, it can be intuitive to have just the one master version, the one that all your customers/users will see and use.
+                    However, what do you do when you want to deploy some new features or patches or other security vulnerabilities? You simply cannot test on the main version that
+                    your users see. It is imperative that that version is always up and running so that your users do not experience an interruption in service. This is why we test
+                    and review all modifications to the source code on a separate version of the application known as the Development server. It is identical to the main one, but
+                    it's our sandbox to try out new variations of software changes before we implement them to the main server.
+                    <a href=https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/dev.yml>
+                        https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/dev.yml
+                    </a>
                 </div>
             </div>
         </div>
@@ -66,7 +77,14 @@
                     <h1>Deploying Master with a Prod Server</h1>
                 </div>
                 <div class="col">
-                    1234
+                    As mentioned above, in addition to the development server where we test our changes, we also have our main server, called the Production server. This is the server
+                    that all of the users will see and the one that you want zero interruptions for, which is why it is often called the "Live Server". When working at a company as a
+                    devops engineer, the production server going down is the absolute worst-case, DEFCON 1, nightmare scenario. Everyone from the customers, to the upper management at
+                    your organization will be breathing down your team's neck, wondering only 2 things: When will it be back up? and Who is responsible so they can be reprimanded. It is
+                    necessary to implement proper test and security to ensure it is always running.
+                    <a href=https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml>
+                        https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml
+                    </a>
                 </div>
             </div>
         </div>
@@ -77,7 +95,9 @@
                     <h1>Deploying an image to Dockerhub</h1>
                 </div>
                 <div class="col">
-                    1234
+                    Dockerhub is a repository service hosted by Docker that easily allows us to find and share container images. To push an image to Dockerhub, all we need to do is first name
+                    a local image using our Dockerhub username as well as the repo that was created via the Dockerhub site. It is also possible to add multiple docker images to a repo by utilizing
+                    tags. Pushing an image is done via the following command: docker push [hub-user]/[repo-name]:[tag]
                 </div>
             </div>
         </div>
