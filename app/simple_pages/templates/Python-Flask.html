@@ -154,63 +154,68 @@
                 </div>
                 <div class="col">
                     <ul>
-                        <li>docker_flask* <- </li>
+                        <li>docker_flask* <- Project Root Directory </li>
                             <ul>
-                            <li>.github*</li>
+                            <li>.github* <- Contains yaml files that deploy the project</li>
                                 <ul>
-                                    <li>workflows*</li>
+                                    <li>workflows* <- Sub-folder that contains yaml files that deploy the project</li>
                                     <ul>
-                                    <li>dev.yml</li>
-                                    <li>heroku_awake_dev.yml</li>
-                                    <li>dev.yml</li>
-                                    <li>prod.yml</li>
+                                    <li>dev.yml <- Development environment deployment to test updates and changes</li>
+                                    <li>heroku_awake_dev.yml <- Github action to keep heroku dev application awake, otherwise it would go to sleep if it does not receive any web traffic</li>
+                                    <li>heroku_awake_prod.yml <- Github action to keep heroku prod application awake, otherwise it would go to sleep if it does not receive any web traffic</li>
+                                    <li>prod.yml <- Production environment deployment to keep a version of the app always running</li>
                                     </ul>
                                 </ul>
-                            <li>app*</li>
+                            <li>app* <- contains application related files such as the html pages, related style sheets, js scripts, and images</li>
                                 <ul>
-                                    <li>context_processors*</li>
+                                    <li>context_processors* <-Contains utility text initialization file</li>
                                     <ul>
-                                    <li>__init__.py</li>
+                                    <li>__init__.py <- Initializes utility text at the bottom of the page</li>
                                     </ul>
-                                    <li>simple_pages*</li>
+                                    <li>simple_pages* <-contains individual content pages that are called and Flask blueprint</li>
                                         <ul>
-                                        <li>templates*</li>
+                                        <li>templates* <- Individual content pages that are called</li>
                                             <ul>
-                                            <li>CI-CD.html</li>
-                                            <li>Docker.html</li>
-                                            <li>Git.html</li>
-                                            <li>index.html</li>
-                                            <li>page4.html</li>
-                                            <li>Python-Flask.html</li>
+                                            <li>CI-CD.html <- Continuous Integration and Continuous Deployment content page</li>
+                                            <li>Docker.html <- Docker content page</li>
+                                            <li>Git.html <- Git content page</li>
+                                            <li>index.html <- Home content page</li>
+                                            <li>page4.html <- Blank page from template, not used</li>
+                                            <li>Python-Flask.html <- Python Flask content page</li>
                                             </ul>
-                                        <li>__init__.py</li>
+                                        <li>__init__.py <- Flask blueprint</li>
                                         </ul>
-                                    <li>static*</li>
+                                    <li>static* <- Holds static elements that are used such as images, style sheet, and scripts</li>
                                         <ul>
-                                        <li>css*</li>
+                                        <li>css* <- Holds Cascading Style Sheet</li>
                                             <ul>
-                                                <li>style.css</li>
+                                                <li>style.css <- Style sheet used to make more dynamic elements in HTML</li>
                                             </ul>
-                                        <li>images*</li>
-                                        <li>js*</li>
+                                        <li>images* <- holds the logo and other images in image carousel</li>
+                                        <li>js* <- holds the javascript file</li>
                                             <ul>
-                                                <li>scripts.js</li>
+                                                <li>scripts.js <-Scripts to make interactive HTML elements </li>
                                             </ul>
                                         </ul>
-                                    <li>templates*</li>
+                                    <li>templates* <- Holds main HTML file</li>
                                         <ul>
-                                            <li>base.html</li>
+                                            <li>base.html <- Main HTML file that calls other simple pages to display</li>
                                         </ul>
-                                    <li>__init__.py</li>
-                                    <li>run.py</li>
+                                    <li>__init__.py <- Creates Flask web application</li>
+                                    <li>run.py <- Allows Green Unicorn(Python Web Server Gateway) to serve the app in production</li>
                                 </ul>
-                            <li>tests*</li>
-                            <li>docker-compose.yml</li>
-                            <li>Dockerfile</li>
-                            <li>heroku.yml</li>
-                            <li>pytest.ini</li>
-                            <li>readme.md</li>
-                            <li>setup.py</li>
+                            <li>tests* <- contains all the tests for this application</li>
+                                <ul>
+                                    <li>conftest.py <- Testing the configuration of the application</li>
+                                    <li>context_processes_test.py <- Testing Context Processes</li>
+                                    <li>simple_pages_test.py <- Testing Simple Pages</li>
+                                </ul>
+                            <li>docker-compose.yml <- Orchestration file that contains the configuration to develop locally, overrides the Dockerfile to run the flask dev server instead of running the gunicorn server that is used for hosting on Heroku</li>
+                            <li>Dockerfile <- File used to create an image to run in a container that runs the program</li>
+                            <li>heroku.yml <- Builds the Docker image on Heroku</li>
+                            <li>pytest.ini <- initilizes and configues the pytest</li>
+                            <li>readme.md <- Generates the html summary seen at the end of a repo, used to convey info about the project</li>
+                            <li>setup.py <- Installs necessary dependencies and packages</li>
                             </ul>
                         </ul>
                         * - indicates a directory
