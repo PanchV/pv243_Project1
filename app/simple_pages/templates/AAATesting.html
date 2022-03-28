@@ -76,18 +76,18 @@
                             </code>
                         <li>Launch this project like we covered in the Docker page of this website</li>
                         <li>Let's write one pytest as an example in the AAA pattern for our calculator:</li>
-                        <pre>
-                <code>def arg_list():
-                    """ [A]-rranging data for AAA Test"""
-                    # have a float and integer
-                    return 2.5, 3
+        <pre>
+<code>def arg_list():
+    """ [A]-rranging data for AAA Test"""
+    # have a float and integer
+    return 2.5, 3
 
-                def test_calculator_add_method():
-                    """Testing Calculator add function"""
-                    """ [A]-ct for AAA Test""""
-                    result = Calculator.add(arg_list())
-                    """ [A]-ssert"""
-                    assert result  == 5.5</code></pre>
+def test_calculator_add_method():
+    """Testing Calculator add function"""
+    """ [A]-ct for AAA Test""""
+    result = Calculator.add(arg_list())
+    """ [A]-ssert"""
+    assert result  == 5.5</code></pre>
                         <li>Here we can clearly see a pytest that tests the add method of our calculator that works in the AAA pattern.</li>
                     </ul>
 

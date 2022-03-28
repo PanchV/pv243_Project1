@@ -59,7 +59,8 @@
                     it makes our code much easier to implement and prevents any unnecessary side effects. It is much
                     better to have a class handle a singular task rather than multiple, when we need that
                     task again, we can just call this class and not have to worry about any unexpected changes.
-                    <b>In our calculator program</b>
+                    <b>In our calculator program, we saw the SRP used when we created different Calculation and History classes
+                    as they each do separate things and combining them into one class would have violated this principle.</b>
                 </div>
             </div>
         </div>
@@ -78,7 +79,8 @@
                     modifying
                     the class itself. This is extremely useful so that we can write code that will be able to add new
                     functionality to the program without changing the existing code.
-                    <b>In our calculator program</b>
+                    <b>In our calculator program we saw this when, as mentioned in previous articles, we extended from our Calculator
+                    class to derive other classes. When we did this, we did not affect the parent class, thus adhering to OCP.</b>
                 </div>
             </div>
         </div>
@@ -98,7 +100,8 @@
                     class. This requires the objects of our subclasses to behave in the same way as the objects of
                     our superclass, which means that an overridden method of a subclass needs to accept the same input
                     parameter values as the method of the superclass.
-                    <b>In our calculator program</b>
+                    <b>In our calculator program, we saw the Liskov Substitution Principle when we saw that all of the classes that were
+                    derived from our original Calculator class took the same input parameters as their parent.</b>
                 </div>
             </div>
         </div>
@@ -116,7 +119,9 @@
                     clients shouldn’t be forced to depend on methods they do not use."</i> This priciple appears
                     very intuitive but can often be easy to violate. The goal of this principle is to reduce the
                     frequency of required changes by splitting the software into multiple, independent parts.
-                    <b>In our calculator program, we saw the SRP used when we created different classes</b>
+                    <b>In our calculator program, we saw the ISP adhered to when we divided the calculator program into multiple files
+                    such as History and Operations. This ensured that changes/implementations of one of those parts did not affect the
+                    other, adhering to ISP.</b>
                 </div>
             </div>
         </div>
@@ -138,7 +143,9 @@
                     which
                     provide utility features. If we apply the Open/Closed Principle and the Liskov Substitution
                     Principle to our code, it will naturally follow the Dependency Inversion Principle.
-                    <b>In our calculator program</b>
+                    <b>In our calculator program, we saw DIP when we were working on our Calculations. We made sure that classes
+                    such as Addition and Subtraction(low-level) did not interact directly with our Calculator class(high-level),
+                    they went through the Calculation class.</b>
                 </div>
             </div>
         </div>

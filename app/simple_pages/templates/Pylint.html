@@ -38,12 +38,18 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <img src="{{ url_for('static', filename='images/') }}" class="img"
+                    <img src="{{ url_for('static', filename='images/PylintSnakeCase-2.png') }}" class="img"
                              alt="...">
                 </div>
                 <div class="col">
-                    <h1>Testing</h1>
+                    <h1>Invalid Name</h1>
 
+                    When I thought I was done writing all the files in the program, I used the <code>pytest --pylint</code> command to "lint" through the files. One of the
+                    errors we can see as part of the output is here below:
+                    <img src="{{ url_for('static', filename='images/PylintSnakeCase.png') }}" class="img"
+                             alt="..."><br>
+                    It is evident that the names of some of our tests do not follow the snake case naming convention, so we will have to fix the names of all of these
+                    tests to make sure they pass the pylint test.
                 </div>
             </div>
         </div>
@@ -51,12 +57,16 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <img src="{{ url_for('static', filename='images/') }}" class="img"
+                    <img src="{{ url_for('static', filename='images/PylintFinalNewline-2.png') }}" class="img"
                              alt="...">
                 </div>
                 <div class="col">
-                    <h1>Creating And Testing Simple Pages</h1>
-
+                    <h1>Final Newline Missing</h1>
+                    Here is another error pylint found in multiple files:
+                    <img src="{{ url_for('static', filename='images/PylintFinalNewline.png') }}" class="img"
+                             alt="..."><br>
+                    This error means that there is no empty new line at the end of the program. We simply need to go in, use the enter/return key
+                    to add a new line, and we'll be all set.
                 </div>
             </div>
         </div>
@@ -64,16 +74,35 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <img src="{{ url_for('static', filename='images/') }}" class="img"
+                    <img src="{{ url_for('static', filename='images/PylintPointlessString-2.png') }}" class="img"
                              alt="...">
                 </div>
                 <div class="col">
-                    <h1>Link To Project On GitHub</h1>
+                    <h1>Pointless String Statement</h1>
+                    Another type of error we see is the following:
+                    <img src="{{ url_for('static', filename='images/PylintPointlessString.png') }}" class="img"
+                             alt="..."><br>
+                    We see this error in our calculator_test.py page at this part of the code:
+<pre>
+<code>def arg_list():
+    """ [A]-rranging data for AAA Test"""
+    # have a float and integer
+    return 2.5, 3
 
+def test_calculator_add_method():
+    """Testing Calculator add function"""
+    """ [A]-ct for AAA Test""""
+    result = Calculator.add(arg_list())
+    """ [A]-ssert"""
+    assert result  == 5.5</code></pre><br>
+                    The triple quotes which help us write comments in our code are actually read as docstrings and python doesn't actually consider them comments. These can be
+                    removed as they were just put in to the code to help demonstrate the AAA testing pattern.<br><br>
+                    It may seem like many of these suggestions from pylint are pointless and actually serve no purpose to fixing the actual code, but it is important to stick to a
+                    standard convention when writing code so that other developers can understand and follow it.
                 </div>
             </div>
         </div>
-        <hr>
+        <hr/>
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
