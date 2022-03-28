@@ -20,6 +20,9 @@
 
     </head>
     <body>
+    <div class="row">
+    <div class="column">
+
     <div class="container">
 
         <div class="container">
@@ -39,9 +42,11 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <h1>GitHub Actions</h1>
+                    <img src="{{ url_for('static', filename='images/CICDGithubActions.png') }}" class="img"
+                             alt="...">
                 </div>
                 <div class="col">
+                    <h1>GitHub Actions</h1>
                     Github Actions allow us to implement the process of CI-CD into projects such as this one. They actually go a little bit further than DevOps because they allow
                     certain events such as a pull request to trigger workflows. Github does this via jobs, each of which run inside their own virtual machine/container known
                     as a runner. Jobs are sets of steps that reside in the yaml file that execute on the same runner. In this project, the Github actions check for the correct
@@ -56,9 +61,11 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <h1>Reviewing Code with a Dev Server</h1>
+                    <img src="{{ url_for('static', filename='images/CICDDevServer.png') }}" class="img"
+                             alt="...">
                 </div>
                 <div class="col">
+                    <h1>Reviewing Code with a Dev Server</h1>
                     When creating web applications such as this one, it can be intuitive to have just the one master version, the one that all your customers/users will see and use.
                     However, what do you do when you want to deploy some new features or patches or other security vulnerabilities? You simply cannot test on the main version that
                     your users see. It is imperative that that version is always up and running so that your users do not experience an interruption in service. This is why we test
@@ -74,9 +81,11 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <h1>Deploying Master with a Prod Server</h1>
+                    <img src="{{ url_for('static', filename='images/CICDProdServer.png') }}" class="img"
+                             alt="...">
                 </div>
                 <div class="col">
+                    <h1>Deploying Master with a Prod Server</h1>
                     As mentioned above, in addition to the development server where we test our changes, we also have our main server, called the Production server. This is the server
                     that all of the users will see and the one that you want zero interruptions for, which is why it is often called the "Live Server". When working at a company as a
                     devops engineer, the production server going down is the absolute worst-case, DEFCON 1, nightmare scenario. Everyone from the customers, to the upper management at
@@ -92,16 +101,19 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-3 ">
-                    <h1>Deploying an image to Dockerhub</h1>
+                    <img src="{{ url_for('static', filename='images/CICDDockerHub.png') }}" class="img"
+                             alt="...">
                 </div>
                 <div class="col">
+                    <h1>Deploying an image to Dockerhub</h1>
                     Dockerhub is a repository service hosted by Docker that easily allows us to find and share container images. To push an image to Dockerhub, all we need to do is first name
                     a local image using our Dockerhub username as well as the repo that was created via the Dockerhub site. It is also possible to add multiple docker images to a repo by utilizing
                     tags. Pushing an image is done via the following command: docker push [hub-user]/[repo-name]:[tag]
                 </div>
             </div>
         </div>
-
+    </div>
+</div>
 
 
             <!-- Optional JavaScript; choose one of the two! -->

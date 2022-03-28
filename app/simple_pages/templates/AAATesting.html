@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+              crossorigin="anonymous">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+            <title>{% block title %}{% endblock %}This is Panch's Website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <div class="container">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>
+                    <h1>What is AAA?</h1>
+                    AAA is a pattern that is present in Unit Testing in Python that stands for Arrange, Act, Assert. But
+                    first, what exactly is a Unit Test?
+                    The unit test is a testing framework that supports test automation, sharing of setup and shutdown
+                    code for tests, aggregation of tests into
+                    collections, and independence of the tests from the reporting framework. The AAA pattern is one
+                    where we divide the test method into three
+                    sections which each have their own special role.
+                    <br><br>
+                    <ul>
+                        <li>Arrange</li>
+                        <ul>
+                            <li>Have the code properly set up for the test. Create any necessary objects for a mock
+                                setup if necessary.
+                            </li>
+                        </ul>
+                        <li>Act</li>
+                        <ul>
+                            <li>Invoke the method to be tested.</li>
+                        </ul>
+                        <li>Assert</li>
+                        <ul>
+                            <li>Check whether the expectations were met.</li>
+                        </ul>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/AAAPythonTutorial.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>A Tutorial with Python</h1>
+                    <br>
+                    <ul>
+                        <li>Launch a terminal and install pytest</li>
+                            <code>
+                            pip install pytest==2.9.1
+                            </code>
+                        <li>Confirm installation by calling the help menu, if it appears, then pytest is installed</li>
+                            <code>
+                            py.test -h
+                            </code>
+                        <li>Launch this project like we covered in the Docker page of this website</li>
+                        <li>Let's write one pytest as an example in the AAA pattern for our calculator:</li>
+                        <pre>
+                <code>def arg_list():
+                    """ [A]-rranging data for AAA Test"""
+                    # have a float and integer
+                    return 2.5, 3
+
+                def test_calculator_add_method():
+                    """Testing Calculator add function"""
+                    """ [A]-ct for AAA Test""""
+                    result = Calculator.add(arg_list())
+                    """ [A]-ssert"""
+                    assert result  == 5.5</code></pre>
+                        <li>Here we can clearly see a pytest that tests the add method of our calculator that works in the AAA pattern.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/AAAImportant.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Why It is important</h1>
+                    <br>
+                    As we mentioned in the earlier Python-Flask article on this site, it is crucial that testing is in
+                    place. The absolute worst
+                    thing in the devops world to do is to have one bad programmer merge a branch with faulty or broken
+                    code with the main branch.
+                    Testing combats this by making sure that every single time someone tries to push their branch to the
+                    master branch, their branch
+                    will have to pass tests that will ensure that the code they've just written won't break the main
+                    program. AAA testing is very
+                    important because it gives a standard format for developing new tests, which makes it easier to
+                    implement our tests throughout
+                    our code and can help us test elements and methods we never thought possible before.
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/References.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>References</h1>
+                    <ul>
+                        <li>
+                            <a href=https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/>
+                                https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/</a>
+                        </li>
+                        <li><a href=https://performancelabus.com/unit-testing-importance/>
+                            https://performancelabus.com/unit-testing-importance/</a></li>
+                        <li><a href=https://theqalead.com/topics/what-are-automation-testing-tools/>
+                            https://theqalead.com/topics/what-are-automation-testing-tools/</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}

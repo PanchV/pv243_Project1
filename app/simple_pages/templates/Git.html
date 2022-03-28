@@ -21,9 +21,9 @@
     </head>
     <body>
     <div class="container">
-
         <div class="container">
             <div class="row">
+
                 <div class="col">
                     <p>
                     <h1>What is Git?</h1>
@@ -40,15 +40,19 @@
                     elements of Git that will help us further understand how it works and how it is useful.
                     </p>
                 </div>
+
             </div>
+
         </div>
         <hr/>
         <div class="container">
             <div class="row">
-                <div class="col col-md-3 ">
-                    <h1>Branches</h1>
+                <div class="col col-md-3">
+                    <img src="{{ url_for('static', filename='images/GitBranches.png') }}" class="img"
+                             alt="...">
                 </div>
                 <div class="col">
+                    <h1>Branches</h1>
                     A Git Branch is simply a snapshot or temporary copy of the main version of the source code. When you
                     create a new branch, you
                     diverge from the main code and are free to make changes without interfering with the source code.
@@ -63,9 +67,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-3">
-                            <h1>Merge</h1>
-                        </div>
+                    <img src="{{ url_for('static', filename='images/GitMerge.png') }}" class="img"
+                             alt="...">
+                </div>
                         <div class="col">
+                            <h1>Merge</h1>
                             A Git Merge is a way for Git to put together all the various versions of code that have been
                             developed independently from
                             the source code. The merge command essentially takes the ends of the two or more branches,
@@ -80,9 +86,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col col-md-3">
-                                    <h1>Commit</h1>
+                                    <img src="{{ url_for('static', filename='images/GitCommit.png') }}" class="img"
+                             alt="...">
                                 </div>
                                 <div class="col">
+                                    <h1>Commit</h1>
                                     A Git Commit is how you get a snapshot of all the changes made on the current branch
                                     at any given point. Git developers
                                     usually accumulate multiple commits on their own local branch, keep related commits
@@ -95,9 +103,11 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col col-md-3">
-                                            <h1>Tags</h1>
+                                            <img src="{{ url_for('static', filename='images/GitTags.png') }}" class="img"
+                             alt="...">
                                         </div>
                                         <div class="col">
+                                            <h1>Tags</h1>
                                             Git Tags are references that act as pointers to specific parts of the git
                                             history. It is considered good practice
                                             to use the tag feature to keep track of versions of code. Git supports
@@ -112,9 +122,11 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col col-md-3">
-                                                    <h1>Repositories</h1>
+                                                    <img src="{{ url_for('static', filename='images/GitRepositories.png') }}" class="img"
+                             alt="...">
                                                 </div>
                                                 <div class="col">
+                                                    <h1>Repositories</h1>
                                                     A Git Repository is the virtual folder that contains all the saved
                                                     versions of your code as well as any relevant program
                                                     files. Repositories can be created via the git init command when

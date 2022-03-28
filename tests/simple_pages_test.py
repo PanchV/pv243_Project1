@@ -6,9 +6,12 @@ def test_request_main_menu_links(client):
     assert response.status_code == 200
     assert b'<a class="nav-link" href="/Git">Git</a>' in response.data
     assert b'<a class="nav-link" href="/Docker">Docker</a>' in response.data
-    assert b'<a class="nav-link" href="/Python-Flask">Python-Flask</a>' in response.data
-    assert b'<a class="nav-link" href="/CI-CD">CI-CD</a>' in response.data
-    #assert b'<a class="nav-link" href="/page4">Page 4</a>' in response.data
+    assert b'<a class="nav-link" href="/Python-Flask">Flask</a>' in response.data
+    assert b'<a class="nav-link" href="/CI-CD">CI/CD</a>' in response.data
+    assert b'<a class="nav-link" href="/Pylint">Pylint</a>' in response.data
+    assert b'<a class="nav-link" href="/AAATesting">AAA</a>' in response.data
+    assert b'<a class="nav-link" href="/OOP">OOP</a>' in response.data
+    assert b'<a class="nav-link" href="/SOLID">SOLID</a>' in response.data
 
 def test_request_Home(client):
     """This makes the index page"""

@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+              crossorigin="anonymous">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+            <title>{% block title %}{% endblock %}This is Panch's Website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>
+                    <h1>What is SOLID?</h1>
+                    SOLID is an acronym meant to represent five major principles of Object-Oriented design that were
+                    developed by Robert C. Martin. These principles establish
+                    good practices that one should adopt when writing code that can help to maintain consistency and
+                    avoid code refactoring as the project eventually grows. We will do
+                    a deep-dive into exactly what these principles are, what they do and mean later in the article. <br><br>
+                    The following are the five major principles and how they are used in the Calculator program: <br>
+                    <ul>
+                        <li>[S] - Single-Responsibility Principle</li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li>[O] - Open-Closed Principle</li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li>[L] - Liskov Substitution Principle</li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li>[I] - Interface Segregation Principle</li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li>[D] - Dependency Inversion Principle</li>
+                    </ul>
+                    <br><br>
+                    <h1>What are Design Patterns?</h1>
+                    Design patterns refer to simple and elegant solutions to common problems that we tend to encounter
+                    when writing software in Object-Oriented Programming. They come as
+                    pre-made blueprints that can be customized with our own code to address a specific design problem.
+                    Below are some commonly used design patterns and an example of how they are used
+                    in our calculator program, below the SOLID principles.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-S.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Single-Responsibility Principle</h1>
+                    <br>
+                    The SRP states <i>"A class should have one and only one reason to change, meaning that a class
+                    should have only one job."</i> The reason that we'd want to implement this principle is that
+                    it makes our code much easier to implement and prevents any unnecessary side effects. It is much
+                    better to have a class handle a singular task rather than multiple, when we need that
+                    task again, we can just call this class and not have to worry about any unexpected changes.
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-O.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Open-Closed Principle</h1>
+                    <br>
+                    The OCP states <i>"Objects or entities should be open for extension but closed for
+                    modification."</i> This just means that we should be able to extend a class if necessary without
+                    modifying
+                    the class itself. This is extremely useful so that we can write code that will be able to add new
+                    functionality to the program without changing the existing code.
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-L.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Liskov Substitution Principle</h1>
+                    <br>
+                    The LSP states <i>"Let q(x) be a property provable about objects of x of type T. Then q(y) should be
+                    provable for objects y of type S where S is a subtype of T."</i> This means that every class
+                    that is derived from another class (a subclass) should be substitutable for their base or parent
+                    class. This requires the objects of our subclasses to behave in the same way as the objects of
+                    our superclass, which means that an overridden method of a subclass needs to accept the same input
+                    parameter values as the method of the superclass.
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-I.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Interface Segregation Principle</h1>
+                    <br>
+                    The ISP states <i>"A client should never be forced to implement an interface that they don’t use, or
+                    clients shouldn’t be forced to depend on methods they do not use."</i> This priciple appears
+                    very intuitive but can often be easy to violate. The goal of this principle is to reduce the
+                    frequency of required changes by splitting the software into multiple, independent parts.
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-D.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Dependency Inversion Principle</h1>
+                    <br>
+                    The DIP states <i>"Entities must depend on abstractions, not on concretions. It states that the
+                    high-level module must not depend on the low-level module, but they should depend on
+                    abstractions."</i>
+                    The general idea of this principle is as simple as it is important: High-level modules, which
+                    provide complex logic, should be easily reusable and unaffected by changes in low-level modules,
+                    which
+                    provide utility features. If we apply the Open/Closed Principle and the Liskov Substitution
+                    Principle to our code, it will naturally follow the Dependency Inversion Principle.
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-Factory.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Factory Method</h1>
+                    <br>
+                    The factory method is a design pattern that allows us to create objects in a way that makes sense.
+                    With this method, we can create objects in a superclass, but allow subclasses to alter the
+                    type of objects that will be created.
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-Facade.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Facade</h1>
+                    <br>
+                    A Facade is a structural design pattern that provides a simplified interface to a library, a
+                    framework, or any other complex set of classes. A facade may seem like it has limited functionality,
+                    but it only includes the features that we care about the clients interacting with and hides
+                    everything else.
+
+
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/SOLID-Builder.png') }}" class="img"
+                         alt="...">
+                </div>
+                <div class="col">
+                    <h1>Builder</h1>
+                    <br>
+                    Builder is a creational design pattern that lets you construct complex objects step by step. The
+                    pattern allows you to produce different types and representations of an object using the
+                    same construction code. The Builder pattern suggests that you extract the object construction code
+                    out of its own class and move it to separate objects called builders.
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 ">
+                    <img src="{{ url_for('static', filename='images/References.png') }}" class="img"
+                             alt="...">
+                </div>
+                <div class="col">
+                    <h1>References</h1>
+                    <ul>
+                        <li><a href=https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design>
+                            https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design</a></li>
+                        <li><a href=https://stackify.com/solid-design-principles/>
+                            https://stackify.com/solid-design-principles/</a></li>
+                        <li><a href=https://refactoring.guru/design-patterns>
+                            https://refactoring.guru/design-patterns</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}
