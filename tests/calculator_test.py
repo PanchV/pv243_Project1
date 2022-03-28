@@ -9,9 +9,9 @@ def arg_list():
 def test_calculator_add_method():
     """Testing Calculator add function"""
     """ [A]-ct for AAA Test""""
-    result = Calculator.add(arg_list())
+    #result = Calculator.add(arg_list())
     """ [A]-ssert"""
-    assert result  == 5.5
+    assert Calculator.add(arg_list()) == 5.5
 
 
 def test_calculator_subtract_method():

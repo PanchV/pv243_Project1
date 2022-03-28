@@ -30,27 +30,9 @@
                     developed by Robert C. Martin. These principles establish
                     good practices that one should adopt when writing code that can help to maintain consistency and
                     avoid code refactoring as the project eventually grows. We will do
-                    a deep-dive into exactly what these principles are, what they do and mean later in the article. <br><br>
-                    The following are the five major principles and how they are used in the Calculator program: <br>
-                    <ul>
-                        <li>[S] - Single-Responsibility Principle</li>
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <li>[O] - Open-Closed Principle</li>
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <li>[L] - Liskov Substitution Principle</li>
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <li>[I] - Interface Segregation Principle</li>
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <li>[D] - Dependency Inversion Principle</li>
-                    </ul>
+                    a deep-dive into exactly what these principles are, what they do and mean, as well as how they are used in our calculator project
+                    later in the article.
+
                     <br><br>
                     <h1>What are Design Patterns?</h1>
                     Design patterns refer to simple and elegant solutions to common problems that we tend to encounter
@@ -70,13 +52,14 @@
                          alt="...">
                 </div>
                 <div class="col">
-                    <h1>Single-Responsibility Principle</h1>
+                    <h1>[S]-ingle-Responsibility Principle</h1>
                     <br>
                     The SRP states <i>"A class should have one and only one reason to change, meaning that a class
                     should have only one job."</i> The reason that we'd want to implement this principle is that
                     it makes our code much easier to implement and prevents any unnecessary side effects. It is much
                     better to have a class handle a singular task rather than multiple, when we need that
                     task again, we can just call this class and not have to worry about any unexpected changes.
+                    <b>In our calculator program</b>
                 </div>
             </div>
         </div>
@@ -88,13 +71,14 @@
                          alt="...">
                 </div>
                 <div class="col">
-                    <h1>Open-Closed Principle</h1>
+                    <h1>[O]-pen-Closed Principle</h1>
                     <br>
                     The OCP states <i>"Objects or entities should be open for extension but closed for
                     modification."</i> This just means that we should be able to extend a class if necessary without
                     modifying
                     the class itself. This is extremely useful so that we can write code that will be able to add new
                     functionality to the program without changing the existing code.
+                    <b>In our calculator program</b>
                 </div>
             </div>
         </div>
@@ -106,7 +90,7 @@
                          alt="...">
                 </div>
                 <div class="col">
-                    <h1>Liskov Substitution Principle</h1>
+                    <h1>[L]-iskov Substitution Principle</h1>
                     <br>
                     The LSP states <i>"Let q(x) be a property provable about objects of x of type T. Then q(y) should be
                     provable for objects y of type S where S is a subtype of T."</i> This means that every class
@@ -114,6 +98,7 @@
                     class. This requires the objects of our subclasses to behave in the same way as the objects of
                     our superclass, which means that an overridden method of a subclass needs to accept the same input
                     parameter values as the method of the superclass.
+                    <b>In our calculator program</b>
                 </div>
             </div>
         </div>
@@ -125,12 +110,13 @@
                          alt="...">
                 </div>
                 <div class="col">
-                    <h1>Interface Segregation Principle</h1>
+                    <h1>[I]-nterface Segregation Principle</h1>
                     <br>
                     The ISP states <i>"A client should never be forced to implement an interface that they don’t use, or
                     clients shouldn’t be forced to depend on methods they do not use."</i> This priciple appears
                     very intuitive but can often be easy to violate. The goal of this principle is to reduce the
                     frequency of required changes by splitting the software into multiple, independent parts.
+                    <b>In our calculator program, we saw the SRP used when we created different classes</b>
                 </div>
             </div>
         </div>
@@ -142,7 +128,7 @@
                          alt="...">
                 </div>
                 <div class="col">
-                    <h1>Dependency Inversion Principle</h1>
+                    <h1>[D]-ependency Inversion Principle</h1>
                     <br>
                     The DIP states <i>"Entities must depend on abstractions, not on concretions. It states that the
                     high-level module must not depend on the low-level module, but they should depend on
@@ -152,6 +138,7 @@
                     which
                     provide utility features. If we apply the Open/Closed Principle and the Liskov Substitution
                     Principle to our code, it will naturally follow the Dependency Inversion Principle.
+                    <b>In our calculator program</b>
                 </div>
             </div>
         </div>
