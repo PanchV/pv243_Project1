@@ -39,8 +39,11 @@
             </div>
         </div>
         <hr/>
+
         <div class="container">
-            <div class="row">
+        <div class="row">
+            <div class="col col-md-8">
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/CICDGithubActions.png') }}" class="img"
                              alt="...">
@@ -52,14 +55,13 @@
                     as a runner. Jobs are sets of steps that reside in the yaml file that execute on the same runner. In this project, the Github actions check for the correct
                     Ubuntu version, Python version, the correct repository, and necessary dependencies:
                     <a href=https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml>
-                        https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml
+                        https://github.com/PanchV/pv243_Project1/blob/master/ .github/workflows/prod.yml
                     </a>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+
+                <hr/>
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/CICDDevServer.png') }}" class="img"
                              alt="...">
@@ -72,14 +74,12 @@
                     and review all modifications to the source code on a separate version of the application known as the Development server. It is identical to the main one, but
                     it's our sandbox to try out new variations of software changes before we implement them to the main server.
                     <a href=https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/dev.yml>
-                        https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/dev.yml
+                        https://github.com/PanchV/pv243_Project1/blob/master/ .github/workflows/dev.yml
                     </a>
                 </div>
             </div>
-        </div>
-            <hr/>
-        <div class="container">
-            <div class="row">
+                <hr/>
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/CICDProdServer.png') }}" class="img"
                              alt="...">
@@ -92,14 +92,12 @@
                     your organization will be breathing down your team's neck, wondering only 2 things: When will it be back up? and Who is responsible so they can be reprimanded. It is
                     necessary to implement proper test and security to ensure it is always running.
                     <a href=https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml>
-                        https://github.com/PanchV/pv243_Project1/blob/master/.github/workflows/prod.yml
+                        https://github.com/PanchV/pv243_Project1/blob/master/ .github/workflows/prod.yml
                     </a>
                 </div>
             </div>
-        </div>
-            <hr/>
-        <div class="container">
-            <div class="row">
+                <hr/>
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/CICDDockerHub.png') }}" class="img"
                              alt="...">
@@ -111,7 +109,17 @@
                     tags. Pushing an image is done via the following command: docker push [hub-user]/[repo-name]:[tag]
                 </div>
             </div>
+
+            </div>
+            <div class = "col col-md-3">
+                        <img src="{{ url_for('static', filename='images/banner.png') }}" class="img"
+                             alt="...">
+            </div>
+
         </div>
+    </div>
+
+
     </div>
 </div>
 

@@ -38,113 +38,66 @@
                     </p>
                 </div>
             </div>
+            <hr/>
             <div class="container">
                 <div class="row">
                     <div class="col col-md-8">
+                        <div class="row">
+                            <div class="col col-md-3">
+                                <img src="{{ url_for('static', filename='images/GitBranches.png') }}" class="img" alt="...">
+                            </div>
+                            <div class="col">
+                                <h1>Branches</h1>
+                                A Git Branch is simply a snapshot or temporary copy of the main version of the source code. When you
+                                create a new branch, you
+                                diverge from the main code and are free to make changes without interfering with the source code.
+                                When you are finished making
+                                changes, you can rejoin or "Merge" your branch with the main branch which will add all of your
+                                changes to the main source code.
+                            </div>
+                            <hr/>
+                            <div class="col col-md-3">
+                                <img src="{{ url_for('static', filename='images/GitMerge.png') }}" class="img" alt="...">
+                            </div>
+                            <div class="col">
+                                <h1>Merge</h1>
+                                A Git Merge is a way for Git to put together all the various versions of code that have been developed independently from the source code. The merge command essentially takes the ends of the two or more branches, and then tries to find a common base "Commit" between the two versions. Once it finds the common base commit, it creates a new commit that combines the changes of the multiple branches.
+                            </div>
+                            <hr/>
+                            <div class="col col-md-3">
+                                <img src="{{ url_for('static', filename='images/GitCommit.png') }}" class="img" alt="...">
+                            </div>
+                            <div class="col">
+                                <h1>Commit</h1>
+                                A Git Commit is how you get a snapshot of all the changes made on the current branch at any given point. Git developers usually accumulate multiple commits on their own local branch, keep related commits grouped together, and then clean up their local branch before merging it with the main branch.
+                            </div>
+                            <hr/>
+                            <div class="col col-md-3">
+                                <img src="{{ url_for('static', filename='images/GitTags.png') }}" class="img" alt="...">
+                            </div>
+                            <div class="col">
+                                <h1>Tags</h1>
+                                Git Tags are references that act as pointers to specific parts of the git history. It is considered good practice to use the tag feature to keep track of versions of code. Git supports Annotated Tags and Lightweight Tags. Annotated tags store metadata such as tagger's email and the date. Lightweight Tags do not store this extra metadata and are very much like a branch that doesn't change.
+                            </div>
+                            <hr/>
+                            <div class="col col-md-3">
+                                <img src="{{ url_for('static', filename='images/GitRepositories.png') }}" class="img" alt="...">
+                            </div>
+                            <div class="col">
+                                <h1>Repositories</h1>
+                                A Git Repository is the virtual folder that contains all the saved versions of your code as well as any relevant program files. Repositories can be created via the git init command when making a repository from scratch or via the git clone command to create a local copied version of an already set up central repository. Git has two kinds of repositories: Bare Repositories, used to share the edits made by team members and Non-Bare Repositories, used to allow users to make changes to an existing repository and make new versions.
+                            </div>
+
+                        </div>
 
                     </div>
                     <div class = "col col-md-3">
-
+                        <img src="{{ url_for('static', filename='images/banner.png') }}" class="img"
+                             alt="...">
                     </div>
                 </div>
             </div>
         </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
-                <div class="col col-md-3">
-                    <img src="{{ url_for('static', filename='images/GitBranches.png') }}" class="img"
-                             alt="...">
-                </div>
-                <div class="col">
-                    <h1>Branches</h1>
-                    A Git Branch is simply a snapshot or temporary copy of the main version of the source code. When you
-                    create a new branch, you
-                    diverge from the main code and are free to make changes without interfering with the source code.
-                    When you are finished making
-                    changes, you can rejoin or "Merge" your branch with the main branch which will add all of your
-                    changes to the main source code.
-
-                </div>
-            </div>
-            <hr/>
-            <div class="row">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-md-3">
-                    <img src="{{ url_for('static', filename='images/GitMerge.png') }}" class="img"
-                             alt="...">
-                </div>
-                        <div class="col">
-                            <h1>Merge</h1>
-                            A Git Merge is a way for Git to put together all the various versions of code that have been
-                            developed independently from
-                            the source code. The merge command essentially takes the ends of the two or more branches,
-                            and then tries to find a
-                            common base "Commit" between the two versions. Once it finds the common base commit, it
-                            creates a new commit that combines
-                            the changes of the multiple branches.
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col col-md-3">
-                                    <img src="{{ url_for('static', filename='images/GitCommit.png') }}" class="img"
-                             alt="...">
-                                </div>
-                                <div class="col">
-                                    <h1>Commit</h1>
-                                    A Git Commit is how you get a snapshot of all the changes made on the current branch
-                                    at any given point. Git developers
-                                    usually accumulate multiple commits on their own local branch, keep related commits
-                                    grouped together, and then clean
-                                    up their local branch before merging it with the main branch.
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="row">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col col-md-3">
-                                            <img src="{{ url_for('static', filename='images/GitTags.png') }}" class="img"
-                             alt="...">
-                                        </div>
-                                        <div class="col">
-                                            <h1>Tags</h1>
-                                            Git Tags are references that act as pointers to specific parts of the git
-                                            history. It is considered good practice
-                                            to use the tag feature to keep track of versions of code. Git supports
-                                            Annotated Tags and Lightweight Tags. Annotated
-                                            tags store metadata such as tagger's email and the date. Lightweight Tags do
-                                            not store this extra metadata and are very
-                                            much like a branch that doesn't change.
-                                        </div>
-                                    </div>
-                                    <hr/>
-                                    <div class="row">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col col-md-3">
-                                                    <img src="{{ url_for('static', filename='images/GitRepositories.png') }}" class="img"
-                             alt="...">
-                                                </div>
-                                                <div class="col">
-                                                    <h1>Repositories</h1>
-                                                    A Git Repository is the virtual folder that contains all the saved
-                                                    versions of your code as well as any relevant program
-                                                    files. Repositories can be created via the git init command when
-                                                    making a repository from scratch or via the git clone command
-                                                    to create a local copied version of an already set up central
-                                                    repository. Git has two kinds of repositories: Bare Repositories,
-                                                    used to share the edits made by team members and Non-Bare
-                                                    Repositories, used to allow users to make changes to an existing
-                                                    repository
-                                                    and make new versions.
-                                                </div>
-                                            </div>
-                                        </div>
 
 
 

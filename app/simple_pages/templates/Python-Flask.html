@@ -39,13 +39,15 @@
         </div>
         <hr/>
         <div class="container">
-            <div class="row">
+        <div class="row">
+            <div class="col col-md-8">
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonPytest.svg') }}" class="img"
                              alt="...">
                 </div>
                 <div class="col">
-                    <h1>Testing With PyTest</h1>
+                    <h1>Creating And Testing Simple Pages</h1>
                     When developing with a team of other devops engineers, it is crucial that testing is in place. The
                     absolute worst thing in the devops world to do is to have one bad programmer
                     merge a branch with faulty or broken code with the main branch. What will tend to happen is everyone
@@ -69,36 +71,43 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+
+                <hr/>
+
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonSimplePages.jpg') }}" class="img"
                              alt="...">
                 </div>
                 <div class="col">
                     <h1>Creating And Testing Simple Pages</h1>
-                    Simple pages is a structure that allows us to maintain all of the pages in a website effectively and
-                    effeciently. When first approaching web development,
-                    it may seem intuitive to simply create multiple html files that contain all of your content and then
-                    have them pull up as the user navigates the web page.
-                    However, it is much better practice to have one main base html page that "calls" or points to your
-                    other pages. These other pages "extend" on your base.
-                    Within your base page, you can have all of teh elements that will be common throughout your site,
-                    such as a navigation bar. This is exactly how they are
-                    set up on this website. One base.html files calls other html files(Git.html, Docker.html) which all
-                    extend on base.html. All of these simple pages are tested
-                    with the following:
-                    <a href=https://github.com/PanchV/pv243_Project1/blob/master/tests/simple_pages_test.py>
-                        https://github.com/PanchV/pv243_Project1/blob/master/tests/simple_pages_test.py
-                    </a>
+                    When developing with a team of other devops engineers, it is crucial that testing is in place. The
+                    absolute worst thing in the devops world to do is to have one bad programmer
+                    merge a branch with faulty or broken code with the main branch. What will tend to happen is everyone
+                    will continue to make commits and merges after this one faulty branch. Several
+                    merges later, surprise surprise, the code no longer works. even worse, they will never know whose
+                    bad merge broke the source code. Lots of time and resources will be spent trying
+                    to identify the problem. With testing, every single time someone tries to push their branch to the
+                    master branch, their branch will have to pass tests that will ensure that the code
+                    they've just written won't break the main program. This webpage has mutiple tests that can be found
+                    here:
+                    <ul>
+                        <li><a href=https://github.com/PanchV/pv243_Project1/blob/master/tests/simple_pages_test.py>
+                            Testing Simple Pages
+                        </a></li>
+                        <li><a href=https://github.com/PanchV/pv243_Project1/blob/master/tests/context_process_test.py>
+                            Testing Context Processes
+                        </a></li>
+                        <li><a href=https://github.com/PanchV/pv243_Project1/blob/master/tests/conftest.py>
+                            Testing the configuration of the application
+                        </a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+
+                <hr/>
+
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonProject.png') }}" class="img"
                              alt="...">
@@ -110,10 +119,9 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+                <hr/>
+
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonFlaskLink.png') }}" class="img"
                              alt="...">
@@ -124,26 +132,26 @@
                         https://flask.palletsprojects.com/en/2.0.x/
                     </a>
                 </div>
-            </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+                </div>
+
+                <hr/>
+
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonFlaskBlueprint.png') }}" class="img"
-                             alt="...">
+                                 alt="...">
                 </div>
                 <div class="col">
                     <h1>Flask Blueprint Documentation</h1>
                     <a href=https://github.com/PanchV/pv243_Project1/blob/master/app/simple_pages/__init__.py>
-                        https://github.com/PanchV/pv243_Project1/blob/master/app/simple_pages/__init__.py
+                        https://github.com/PanchV/pv243_Project1/blob/master/app/ simple_pages/__init__.py
                     </a>
                 </div>
-            </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+                </div>
+
+                <hr/>
+
+                <div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonFlaskTesting.jpg') }}" class="img"
                              alt="...">
@@ -157,10 +165,11 @@
                         </a>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="row">
+
+                <hr/>
+
+
+<div class="row">
                 <div class="col col-md-3 ">
                     <img src="{{ url_for('static', filename='images/PythonFiles.jpg') }}" class="img"
                              alt="...">
@@ -234,6 +243,27 @@
                         </ul>
                         * - indicates a directory
                 </div>
+            </div>
+
+
+
+
+
+
+
+
+            </div>
+            <div class = "col col-md-3">
+                        <img src="{{ url_for('static', filename='images/banner.png') }}" class="img"
+                             alt="...">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
             </div>
         </div>
         <!-- Optional JavaScript; choose one of the two! -->
