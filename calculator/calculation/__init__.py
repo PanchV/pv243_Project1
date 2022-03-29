@@ -2,8 +2,6 @@
 from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Mult
 
 class Calculation:
-    """ abstract class that serves as base"""
-
     def __init__(self, args_tuple: tuple):
         """ constructor """
         self.values = Calculation.convert_args_to_float_tuple(args_tuple)
@@ -15,7 +13,6 @@ class Calculation:
 
     @staticmethod
     def convert_args_to_float_tuple(args_tuple: tuple):
-        """ sanitize input to float tuple """
         float_list = []
         for item in args_tuple:
             float_list.append(float(item))
@@ -23,7 +20,6 @@ class Calculation:
 
 
 class Addition(Calculation):
-    """Addition class """
 
     def get_result(self):
         """Add values and return result"""
@@ -34,7 +30,6 @@ class Addition(Calculation):
 
 
 class Subtraction(Calculation):
-    """Subtraction class"""
 
     def get_result(self):
         """Subtract values and return result"""
@@ -45,7 +40,6 @@ class Subtraction(Calculation):
 
 
 class Multiplication(Calculation):
-    """Multiplcation class"""
 
     def get_result(self):
         """Multiple values and return result"""

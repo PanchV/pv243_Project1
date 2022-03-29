@@ -3,22 +3,23 @@ from calculator import Calculator
 
 def arg_list():
     """ [A]-rranging data for AAA Test"""
-    # have a float and integer
+    # float and integer
     return 2.5, 3
 
+
 # def test_calculator_add_method():
-#     """Testing Calculator add function"""
-#     """[A]-ct for AAA Test"""
-#     #result = Calculator.add(arg_list())
-#     """[A]-ssert"""
-#     assert Calculator.add(arg_list()) == 5.5
+#      """Testing Calculator add function"""
+#      """[A]-ct for AAA Test"""
+#      #result = Calculator.add(arg_list())
+#      """[A]-ssert"""
+#      assert Calculator.add(x, y) == 5.5
 #
 #
 # def test_calculator_subtract_method():
-#     """Testing Calculator subtract function"""
-#     assert Calculator.subtract(arg_list()) == -0.5
+#      """Testing Calculator subtract function"""
+#      assert Calculator.subtract(arg_list()) == -0.5
 #
 #
 # def test_calculator_multiply_method():
-#     """Testing Calculator multiply function"""
-#     assert Calculator.multiply(arg_list()) == 7.5
+#      """Testing Calculator multiply function"""
+#      assert Calculator.multiply(arg_list()) == 7.5
